@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        center{border: 3px double black;
+              width: fit-content;
+              margin-left: 400px;
+               padding: 10px;
+               border-top-left-radius: 10%;
+              background-color: rgb(241, 130, 130);}
+        #s{background-color: rgb(99, 241, 99);
+          font-size: 40px;}
+        h1{
+            background:linear-gradient(200deg,black,green,red,yellow);
+            color: aliceblue;
+            width: fit-content;
+        }
+       
+    </style>
+</head>
+<body>
+    <center>
+
+        <form method="POST" enctype="multipart/form-data">
+            <h1><u>Registation Form</u></h1>
+            {% csrf_token %}
+            {{UMF.as_p}}
+            {{PMF.as_p}}
+            <input type="submit" id="s">
+        </form>
+    </center>
+</body>
+</html>
